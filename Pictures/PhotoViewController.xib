@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Cj-Mlb">
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Cj-Mlb">
                     <rect key="frame" x="0.0" y="436" width="480" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="YUB-XX-aF6"/>
@@ -45,25 +45,32 @@
                         </mask>
                     </variation>
                 </toolbar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-fp-Kpn">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-fp-Kpn">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="436"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="436" id="M1g-En-7cr"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0ma-mv-Mxv"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="leading" secondItem="7vv-Cj-Mlb" secondAttribute="leading" id="GAi-JX-U3c"/>
                 <constraint firstAttribute="trailing" secondItem="7vv-Cj-Mlb" secondAttribute="trailing" id="Igc-MO-zsF"/>
                 <constraint firstItem="7vv-Cj-Mlb" firstAttribute="top" secondItem="XT6-fp-Kpn" secondAttribute="bottom" id="K4N-tY-cMS"/>
                 <constraint firstItem="7vv-Cj-Mlb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QiG-4L-Wbo"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="bottom" secondItem="7vv-Cj-Mlb" secondAttribute="top" id="Utj-P3-TzR"/>
                 <constraint firstAttribute="trailing" secondItem="XT6-fp-Kpn" secondAttribute="trailing" id="WoI-1Q-7mk"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="trailing" secondItem="7vv-Cj-Mlb" secondAttribute="trailing" id="YuG-Mm-cJU"/>
                 <constraint firstItem="XT6-fp-Kpn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="efX-FH-arB"/>
+                <constraint firstAttribute="trailing" secondItem="XT6-fp-Kpn" secondAttribute="trailing" id="ige-hI-IbN"/>
                 <constraint firstItem="XT6-fp-Kpn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oqs-o4-LcJ"/>
-                <constraint firstAttribute="bottom" secondItem="7vv-Cj-Mlb" secondAttribute="bottom" constant="20" symbolic="YES" id="sGv-FW-ZQQ">
-                    <variation key="heightClass=regular"/>
-                </constraint>
+                <constraint firstAttribute="bottom" secondItem="7vv-Cj-Mlb" secondAttribute="bottom" constant="20" symbolic="YES" id="sGv-FW-ZQQ"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xCb-gN-JY7"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[heightClass=regular]"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[default]"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="WoI-1Q-7mk"/>

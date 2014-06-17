@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1534FA2B1950EE79007DB986 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1534FA2A1950EE79007DB986 /* libPods-AFNetworking.a */; };
 		15DE934A19508533006F265C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE934919508533006F265C /* AppDelegate.swift */; };
 		15DE934C19508533006F265C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15DE934B19508533006F265C /* Images.xcassets */; };
 		15DE935819508533006F265C /* PicturesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DE935719508533006F265C /* PicturesTests.swift */; };
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1534FA221950CEF3007DB986 /* Pictures-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pictures-Bridging-Header.h"; sourceTree = "<group>"; };
+		1534FA2A1950EE79007DB986 /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		15DE934419508533006F265C /* Pictures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pictures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15DE934819508533006F265C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15DE934919508533006F265C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		15DE935719508533006F265C /* PicturesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesTests.swift; sourceTree = "<group>"; };
 		15DE93611950915E006F265C /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		15DE93621950915E006F265C /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		9C9BCFD2103A4A74A58AC562 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1534FA2B1950EE79007DB986 /* libPods-AFNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 				15DE934619508533006F265C /* Pictures */,
 				15DE935419508533006F265C /* PicturesTests */,
 				15DE934519508533006F265C /* Products */,
+				9C9BCFD2103A4A74A58AC562 /* Pods.xcconfig */,
+				4DD2CCD0CA7F468E9A6A8615 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +87,7 @@
 				15DE934719508533006F265C /* Supporting Files */,
 				15DE93611950915E006F265C /* PhotoViewController.swift */,
 				15DE93621950915E006F265C /* PhotoViewController.xib */,
+				1534FA221950CEF3007DB986 /* Pictures-Bridging-Header.h */,
 			);
 			path = Pictures;
 			sourceTree = "<group>";
@@ -109,6 +117,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4DD2CCD0CA7F468E9A6A8615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1534FA2A1950EE79007DB986 /* libPods-AFNetworking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15DE935B19508533006F265C /* Build configuration list for PBXNativeTarget "Pictures" */;
 			buildPhases = (
+				65B9E97D20EF427BB9B94203 /* Check Pods Manifest.lock */,
 				15DE934019508533006F265C /* Sources */,
 				15DE934119508533006F265C /* Frameworks */,
 				15DE934219508533006F265C /* Resources */,
+				AC279248F6ED41F1BCF03AB5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +219,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65B9E97D20EF427BB9B94203 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AC279248F6ED41F1BCF03AB5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15DE934019508533006F265C /* Sources */ = {
@@ -310,23 +361,40 @@
 		};
 		15DE935C19508533006F265C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9BCFD2103A4A74A58AC562 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Pictures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pictures/Pictures-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		15DE935D19508533006F265C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C9BCFD2103A4A74A58AC562 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Pictures/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pictures/Pictures-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -385,6 +453,7 @@
 				15DE935D19508533006F265C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15DE935E19508533006F265C /* Build configuration list for PBXNativeTarget "PicturesTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +462,7 @@
 				15DE936019508533006F265C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

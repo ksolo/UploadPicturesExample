@@ -57,7 +57,12 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBAction func share(sender : AnyObject) {
         let jpeg = UIImageJPEGRepresentation(image.image, 0.8)
+        let manager = AFHTTPRequestOperationManager();
+        let params = ["key" :"value"];
         
+        manager.POST("http://127.0.0.1:9292", parameters: params, constructingBodyWithBlock: {(data) -> Void in data.appendPartWithFormData(jpeg, name: "name") },
+            success: nil,
+            failure: {(operation, response) -> Void in println(response) })
     }
     
     
@@ -66,6 +71,7 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         self.image.image = image as UIImage
         self.dismissModalViewControllerAnimated(true)
     }
+    
     
     
 
