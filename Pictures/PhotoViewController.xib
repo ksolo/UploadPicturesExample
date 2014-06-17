@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController" customModule="Pictures" customModuleProvider="target">
+            <connections>
+                <outlet property="image" destination="XT6-fp-Kpn" id="d3V-Ok-Vzl"/>
+                <outlet property="photoButton" destination="5Ta-pb-0al" id="6gV-8S-Yvd"/>
+                <outlet property="shareButton" destination="eW1-fP-QvL" id="GtD-pb-M6T"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Cj-Mlb">
+                    <rect key="frame" x="0.0" y="436" width="480" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="YUB-XX-aF6"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Item" id="5Ta-pb-0al">
+                            <connections>
+                                <action selector="takePhoto:" destination="-1" id="cza-OF-pDN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Item" id="eW1-fP-QvL">
+                            <connections>
+                                <action selector="share:" destination="-1" id="1H9-1q-h2L"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="YUB-XX-aF6"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <include reference="YUB-XX-aF6"/>
+                        </mask>
+                    </variation>
+                </toolbar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XT6-fp-Kpn">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="436"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="7vv-Cj-Mlb" secondAttribute="trailing" id="Igc-MO-zsF"/>
+                <constraint firstItem="7vv-Cj-Mlb" firstAttribute="top" secondItem="XT6-fp-Kpn" secondAttribute="bottom" id="K4N-tY-cMS"/>
+                <constraint firstItem="7vv-Cj-Mlb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="QiG-4L-Wbo"/>
+                <constraint firstAttribute="trailing" secondItem="XT6-fp-Kpn" secondAttribute="trailing" id="WoI-1Q-7mk"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="efX-FH-arB"/>
+                <constraint firstItem="XT6-fp-Kpn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oqs-o4-LcJ"/>
+                <constraint firstAttribute="bottom" secondItem="7vv-Cj-Mlb" secondAttribute="bottom" constant="20" symbolic="YES" id="sGv-FW-ZQQ">
+                    <variation key="heightClass=regular"/>
+                </constraint>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[heightClass=regular]"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="WoI-1Q-7mk"/>
+                    <exclude reference="efX-FH-arB"/>
+                    <exclude reference="oqs-o4-LcJ"/>
+                    <exclude reference="Igc-MO-zsF"/>
+                    <exclude reference="K4N-tY-cMS"/>
+                    <exclude reference="QiG-4L-Wbo"/>
+                    <exclude reference="sGv-FW-ZQQ"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="WoI-1Q-7mk"/>
+                    <include reference="efX-FH-arB"/>
+                    <include reference="oqs-o4-LcJ"/>
+                    <include reference="Igc-MO-zsF"/>
+                    <include reference="K4N-tY-cMS"/>
+                    <include reference="QiG-4L-Wbo"/>
+                    <include reference="sGv-FW-ZQQ"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="140" y="297"/>
+        </view>
+    </objects>
+</document>
